@@ -27,6 +27,10 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
         this.dispose();
     }
 
+    private void ingresar() {
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,7 +48,7 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
         txtUsuarioProfesor = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txtContraseñaProfesor = new javax.swing.JTextField();
-        btnRegresar1 = new javax.swing.JButton();
+        btnIngresar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
 
@@ -74,10 +78,15 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
 
         txtContraseñaProfesor.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
 
-        btnRegresar1.setBackground(new java.awt.Color(80, 90, 98));
-        btnRegresar1.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
-        btnRegresar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegresar1.setText("Ingresar");
+        btnIngresar.setBackground(new java.awt.Color(80, 90, 98));
+        btnIngresar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
+        btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -102,7 +111,7 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
                 .addContainerGap(59, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnRegresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(191, 191, 191))
         );
         jPanel2Layout.setVerticalGroup(
@@ -121,7 +130,7 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtContraseñaProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnRegresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(390, Short.MAX_VALUE))
         );
 
@@ -180,6 +189,10 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
         regresar();
     }//GEN-LAST:event_btnRegresarActionPerformed
 
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        // TODO add your handling code here:();
+    }//GEN-LAST:event_btnIngresarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -216,8 +229,8 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JButton btnRegresar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
