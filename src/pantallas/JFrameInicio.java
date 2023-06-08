@@ -16,6 +16,8 @@ public class JFrameInicio extends javax.swing.JFrame {
      */
     public JFrameInicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -46,12 +48,10 @@ public class JFrameInicio extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Mundo del Saber");
 
         btnIniciarSesion.setBackground(new java.awt.Color(86, 154, 150));
         btnIniciarSesion.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
-        btnIniciarSesion.setForeground(new java.awt.Color(0, 0, 0));
         btnIniciarSesion.setText("Iniciar Sesión");
         btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +63,11 @@ public class JFrameInicio extends javax.swing.JFrame {
         btnRegistrate.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         btnRegistrate.setForeground(new java.awt.Color(86, 154, 150));
         btnRegistrate.setText("Registrate");
+        btnRegistrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrateActionPerformed(evt);
+            }
+        });
 
         jPanel9.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -125,15 +130,12 @@ public class JFrameInicio extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Sobre Nosotros");
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Aprendizaje");
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Como Funciona");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -250,6 +252,14 @@ public class JFrameInicio extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
+    private void btnRegistrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrateActionPerformed
+       JFrameRegistrarAlumno registrarAlumno = new JFrameRegistrarAlumno(this);
+       registrarAlumno.setLocationRelativeTo(this);
+       registrarAlumno.setVisible(true);
+       this.setVisible(false);
+       
+    }//GEN-LAST:event_btnRegistrateActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -291,39 +301,13 @@ public class JFrameInicio extends javax.swing.JFrame {
     private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton btnRegistrate;
     private javax.swing.JButton btnSobreNosotros;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables
 }

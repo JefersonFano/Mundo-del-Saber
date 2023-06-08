@@ -72,7 +72,6 @@ public class JFrameIniciarUsuario extends javax.swing.JFrame {
 
         btnIniciarAlumno.setBackground(new java.awt.Color(80, 90, 98));
         btnIniciarAlumno.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
-        btnIniciarAlumno.setForeground(new java.awt.Color(0, 0, 0));
         btnIniciarAlumno.setText("Alumno");
         btnIniciarAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -7,7 +7,7 @@ package entidades;
 
 /**
  *
- * @author USER
+ * @author Mundo del Saber
  */
 public class Alumno {
 

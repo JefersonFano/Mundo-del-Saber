@@ -13,13 +13,23 @@ public class Usuario {
 
     private String nombre;
     private String apellido;
-    private String dni;
     private String telefono;
-    private String rol;
+    
     private String correo;
     private String contraseña;
-    private String codigo;
+   
+    private String usuario;
 
+    public Usuario(String nombre, String apellido, String telefono, String correo, String contraseña, String usuario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+     
+        this.correo = correo;
+        this.contraseña = contraseña;
+        
+        this.usuario = usuario;
+    }
     /**
      * @return the nombre
      */
@@ -49,20 +59,6 @@ public class Usuario {
     }
 
     /**
-     * @return the dni
-     */
-    public String getDni() {
-        return dni;
-    }
-
-    /**
-     * @param dni the dni to set
-     */
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    /**
      * @return the telefono
      */
     public String getTelefono() {
@@ -78,17 +74,7 @@ public class Usuario {
 
     /**
      * @return the rol
-     */
-    public String getRol() {
-        return rol;
-    }
 
-    /**
-     * @param rol the rol to set
-     */
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
 
     /**
      * @return the correo
@@ -121,15 +107,29 @@ public class Usuario {
     /**
      * @return the codigo
      */
-    public String getCodigo() {
-        return codigo;
+
+
+    /**
+     * @return the usuario
+     */
+    public String getUsuario() {
+        return usuario;
     }
 
     /**
-     * @param codigo the codigo to set
+     * @param usuario the usuario to set
      */
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
+
+ 
+
+
+    
+    
+
+ 
+ 
 
 }

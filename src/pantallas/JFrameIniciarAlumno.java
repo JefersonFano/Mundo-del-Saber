@@ -1,9 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pantallas;
+
+import com.sun.management.jmx.Trace;
+import javafx.beans.binding.Bindings;
+import javax.swing.JOptionPane;
+import metodos.UsuarioLogic;
 
 /**
  *
@@ -43,8 +44,9 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtUsuarioAlumno = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txtContraseñaAlumno = new javax.swing.JTextField();
-        btnRegresar1 = new javax.swing.JButton();
+        btnIngresar = new javax.swing.JButton();
+        chkMostrarContraseña = new javax.swing.JCheckBox();
+        txtContraseñaAlumno = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
 
@@ -73,12 +75,23 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Contraseña");
 
-        txtContraseñaAlumno.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnIngresar.setBackground(new java.awt.Color(86, 154, 150));
+        btnIngresar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(0, 153, 153));
+        btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
 
-        btnRegresar1.setBackground(new java.awt.Color(86, 154, 150));
-        btnRegresar1.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
-        btnRegresar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegresar1.setText("Ingresar");
+        chkMostrarContraseña.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.disabledForeground"));
+        chkMostrarContraseña.setText("Mostrar Contraseña");
+        chkMostrarContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkMostrarContraseñaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -94,17 +107,22 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
                                 .addGap(89, 89, 89))
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(59, 59, 59)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel5)
-                            .addComponent(txtContraseñaAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)
-                            .addComponent(txtUsuarioAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtUsuarioAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
+                            .addComponent(txtContraseñaAlumno))))
                 .addContainerGap(59, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnRegresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(188, 188, 188))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(186, 186, 186))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(chkMostrarContraseña)
+                        .addGap(98, 98, 98))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,11 +137,13 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
                 .addComponent(txtUsuarioAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtContraseñaAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnRegresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(390, Short.MAX_VALUE))
+                .addComponent(txtContraseñaAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(chkMostrarContraseña)
+                .addGap(82, 82, 82)
+                .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(283, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -150,7 +170,7 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
                         .addGap(125, 125, 125)
                         .addComponent(jLabel1))
                     .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -181,34 +201,39 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
         regresar();
     }//GEN-LAST:event_btnRegresarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrameIniciarAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrameIniciarAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrameIniciarAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrameIniciarAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void chkMostrarContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkMostrarContraseñaActionPerformed
+        if (chkMostrarContraseña.isSelected()){
+            txtContraseñaAlumno.setEchoChar((char) 0);
+        }else{
+             txtContraseñaAlumno.setEchoChar('*');
         }
-        //</editor-fold>
+        
+   
+    }//GEN-LAST:event_chkMostrarContraseñaActionPerformed
 
-        /* Create and display the form */
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        if (!txtUsuarioAlumno.getText().isEmpty() && !txtContraseñaAlumno.getText().isEmpty()){
+           if(UsuarioLogic.autentificar(txtUsuarioAlumno.getText(),txtContraseñaAlumno.getText())){
+               JOptionPane.showMessageDialog(this, "Bienvenido a Mundo del Saber");
+               this.dispose();
+               JFrameMenuPrincipal jfFrameMenuPrincipal = new JFrameMenuPrincipal();
+               jfFrameMenuPrincipal.setVisible(true);
+               
+           }else{
+               JOptionPane.showMessageDialog(this,"Usuario O Contraseña Incorrectos");
+           }
+        
+        }else{
+            JOptionPane.showMessageDialog(this, "Falta ingresar Usuario o Contraseña");
+        }
+       
+        
+    
+        
+    }//GEN-LAST:event_btnIngresarActionPerformed
+
+    public static void main(String args[]) {
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JFrameIniciarAlumno(new JFrameIniciarUsuario(new JFrameInicio())).setVisible(true);
@@ -217,8 +242,9 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JButton btnRegresar1;
+    private javax.swing.JCheckBox chkMostrarContraseña;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -226,7 +252,7 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtContraseñaAlumno;
+    private javax.swing.JPasswordField txtContraseñaAlumno;
     private javax.swing.JTextField txtUsuarioAlumno;
     // End of variables declaration//GEN-END:variables
 }
