@@ -41,5 +41,5 @@ public class Profesor {
     public void setCurso(Curso curso) {
         this.curso = curso;
     }
-
+    
 }
