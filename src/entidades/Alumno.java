@@ -9,10 +9,14 @@ package entidades;
  *
  * @author Mundo del Saber
  */
-public class Alumno {
+public class Alumno extends Usuario {
 
-    String grado;
-    Curso curso;
+    private String grado;
+    private Curso curso;
+
+    public Alumno(String correo, String contraseña, String usuario) {
+        super(correo, contraseña, usuario);
+    }
 
     /**
      * @return the grado

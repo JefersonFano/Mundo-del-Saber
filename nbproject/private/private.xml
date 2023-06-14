@@ -3,22 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/entidades/Usuario.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/entidades/Profesor.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameRegistrarAlumno.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameIniciarAlumno.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameComoFunciona.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameIniciarProfesor.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/entidades/Curso.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameSobreNosotros.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/entidades/Alumno.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/metodos/RegisUsuario.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/entidades/Materia.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameIniciarUsuario.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameMenuPrincipal.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/metodos/UsuarioLogic.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameAprendizaje.java</file>
-            <file>file:/C:/Users/kevin/Desktop/T3%20Electronica%20Kevin/Mundo-del-Saber-JefersonFano-patch-2/Mundo-del-Saber/src/pantallas/JFrameInicio.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/pantallas/JFramePerfil.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/pantallas/JFrameCurso.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/pantallas/JFrameMenuPrincipal.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/entidades/Alumno.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/entidades/Usuario.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/metodos/RegisAlumno.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/pantallas/JFrameInicio.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/metodos/AlumnoLogic.java</file>
+            <file>file:/C:/Users/USER/OneDrive/Escritorio/UPN/5to%20Ciclo/Programación%20orientada%20a%20objetos/MundoDelSaber/Mundo-del-Saber/src/entidades/Profesor.java</file>
         </group>
     </open-files>
 </project-private>
