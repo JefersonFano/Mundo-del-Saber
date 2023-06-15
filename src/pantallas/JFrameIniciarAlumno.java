@@ -78,7 +78,6 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
 
         btnIngresar.setBackground(new java.awt.Color(86, 154, 150));
         btnIngresar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
-        btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
         btnIngresar.setText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,10 +86,18 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
         });
 
         chkMostrarContraseña.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.disabledForeground"));
+        chkMostrarContraseña.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        chkMostrarContraseña.setForeground(new java.awt.Color(255, 255, 255));
         chkMostrarContraseña.setText("Mostrar Contraseña");
         chkMostrarContraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chkMostrarContraseñaActionPerformed(evt);
+            }
+        });
+
+        txtContraseñaAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtContraseñaAlumnoActionPerformed(evt);
             }
         });
 
@@ -144,7 +151,7 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
                 .addComponent(chkMostrarContraseña)
                 .addGap(82, 82, 82)
                 .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -240,6 +247,10 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
     
         
     }//GEN-LAST:event_btnIngresarActionPerformed
+
+    private void txtContraseñaAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtContraseñaAlumnoActionPerformed
 
     public static void main(String args[]) {
 

@@ -5,6 +5,9 @@
  */
 package pantallas;
 
+import javax.swing.JOptionPane;
+import metodos.RegisProfesores;
+
 /**
  *
  * @author MundoDelSaber
@@ -43,8 +46,10 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtUsuarioProfesor = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txtContraseñaProfesor = new javax.swing.JTextField();
-        btnRegresar1 = new javax.swing.JButton();
+        btnIngresar = new javax.swing.JButton();
+        txtContraseñaProfesor = new javax.swing.JPasswordField();
+        chkMostrarContraseña = new javax.swing.JCheckBox();
+        chkMostrarContraseña1 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -73,38 +78,73 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Contraseña");
 
-        txtContraseñaProfesor.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnIngresar.setBackground(new java.awt.Color(80, 90, 98));
+        btnIngresar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
+        btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
 
-        btnRegresar1.setBackground(new java.awt.Color(80, 90, 98));
-        btnRegresar1.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
-        btnRegresar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegresar1.setText("Ingresar");
+        txtContraseñaProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtContraseñaProfesorActionPerformed(evt);
+            }
+        });
+
+        chkMostrarContraseña.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.disabledForeground"));
+        chkMostrarContraseña.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        chkMostrarContraseña.setForeground(new java.awt.Color(255, 255, 255));
+        chkMostrarContraseña.setText("Mostrar Contraseña");
+        chkMostrarContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkMostrarContraseñaActionPerformed(evt);
+            }
+        });
+
+        chkMostrarContraseña1.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.disabledForeground"));
+        chkMostrarContraseña1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        chkMostrarContraseña1.setForeground(new java.awt.Color(255, 255, 255));
+        chkMostrarContraseña1.setText("Mostrar Contraseña");
+        chkMostrarContraseña1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkMostrarContraseña1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(205, 205, 205))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(134, 134, 134)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(89, 89, 89))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
-                            .addComponent(txtContraseñaProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)
-                            .addComponent(txtUsuarioProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtUsuarioProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtContraseñaProfesor)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(chkMostrarContraseña1)
+                            .addComponent(chkMostrarContraseña))))
                 .addContainerGap(59, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnRegresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(191, 191, 191))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,10 +160,14 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtContraseñaProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtContraseñaProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chkMostrarContraseña))
                 .addGap(18, 18, 18)
-                .addComponent(btnRegresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(390, Short.MAX_VALUE))
+                .addComponent(chkMostrarContraseña1)
+                .addGap(28, 28, 28)
+                .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -156,7 +200,7 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
                         .addGap(48, 48, 48)
                         .addComponent(jLabel6))
                     .addComponent(btnRegresar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -165,7 +209,7 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(79, 79, 79)
                 .addComponent(btnRegresar))
@@ -188,6 +232,42 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         regresar();
     }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void txtContraseñaProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaProfesorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtContraseñaProfesorActionPerformed
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+     String usuario = txtUsuarioProfesor.getText();
+     String contraseña = new String(txtContraseñaProfesor.getPassword());
+   if (usuario.isEmpty() || contraseña.isEmpty()) {
+    JOptionPane.showMessageDialog(null, "Por favor ingrese su usuario y contraseña");
+} else {
+    boolean encontrado = RegisProfesores.verificarCredenciales(usuario, contraseña);
+
+    if (encontrado) {
+        JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso");
+        JFrameMenuPrincipal jfFrameMenuPrincipal = new JFrameMenuPrincipal();
+        jfFrameMenuPrincipal.setVisible(true);
+        setVisible(false);
+    } else {
+        JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
+    }
+}
+    }//GEN-LAST:event_btnIngresarActionPerformed
+
+    private void chkMostrarContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkMostrarContraseñaActionPerformed
+   
+
+    }//GEN-LAST:event_chkMostrarContraseñaActionPerformed
+
+    private void chkMostrarContraseña1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkMostrarContraseña1ActionPerformed
+        if (chkMostrarContraseña1.isSelected()){
+            txtContraseñaProfesor.setEchoChar((char) 0);
+        }else{
+            txtContraseñaProfesor.setEchoChar('*');
+        }
+    }//GEN-LAST:event_chkMostrarContraseña1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,8 +305,10 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JButton btnRegresar1;
+    private javax.swing.JCheckBox chkMostrarContraseña;
+    private javax.swing.JCheckBox chkMostrarContraseña1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -235,7 +317,7 @@ public class JFrameIniciarProfesor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtContraseñaProfesor;
+    private javax.swing.JPasswordField txtContraseñaProfesor;
     private javax.swing.JTextField txtUsuarioProfesor;
     // End of variables declaration//GEN-END:variables
 }
