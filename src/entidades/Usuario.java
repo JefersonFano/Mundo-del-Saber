@@ -14,22 +14,16 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String telefono;
-    
     private String correo;
     private String contraseña;
-   
     private String usuario;
 
-    public Usuario(String nombre, String apellido, String telefono, String correo, String contraseña, String usuario) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
-     
+    public Usuario(String correo, String contraseña, String usuario) {
         this.correo = correo;
         this.contraseña = contraseña;
-        
         this.usuario = usuario;
     }
+
     /**
      * @return the nombre
      */
@@ -73,10 +67,6 @@ public class Usuario {
     }
 
     /**
-     * @return the rol
-
-
-    /**
      * @return the correo
      */
     public String getCorreo() {
@@ -105,11 +95,6 @@ public class Usuario {
     }
 
     /**
-     * @return the codigo
-     */
-
-
-    /**
      * @return the usuario
      */
     public String getUsuario() {
@@ -122,14 +107,5 @@ public class Usuario {
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
-
- 
-
-
-    
-    
-
- 
- 
 
 }

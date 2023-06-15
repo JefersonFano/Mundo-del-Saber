@@ -4,7 +4,7 @@ package pantallas;
 import com.sun.management.jmx.Trace;
 import javafx.beans.binding.Bindings;
 import javax.swing.JOptionPane;
-import metodos.UsuarioLogic;
+import metodos.AlumnoLogic;
 
 /**
  *
@@ -49,6 +49,7 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
         txtContraseñaAlumno = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(80, 90, 98));
@@ -77,7 +78,7 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
 
         btnIngresar.setBackground(new java.awt.Color(86, 154, 150));
         btnIngresar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
-        btnIngresar.setForeground(new java.awt.Color(0, 153, 153));
+        btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
         btnIngresar.setText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,15 +151,18 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Mundo del Saber");
 
-        btnRegresar.setBackground(new java.awt.Color(0, 0, 0));
+        btnRegresar.setBackground(new java.awt.Color(86, 154, 150));
         btnRegresar.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         btnRegresar.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegresar.setText("Regresar");
+        btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/regresar.png"))); // NOI18N
+        btnRegresar.setBorder(null);
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegresarActionPerformed(evt);
             }
         });
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/loginAlumno.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -169,8 +173,11 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(125, 125, 125)
                         .addComponent(jLabel1))
-                    .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(jLabel6))
+                    .addComponent(btnRegresar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -179,8 +186,10 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
+                .addGap(131, 131, 131)
+                .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnRegresar))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -213,7 +222,7 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (!txtUsuarioAlumno.getText().isEmpty() && !txtContraseñaAlumno.getText().isEmpty()){
-           if(UsuarioLogic.autentificar(txtUsuarioAlumno.getText(),txtContraseñaAlumno.getText())){
+           if(AlumnoLogic.autentificar(txtUsuarioAlumno.getText(),txtContraseñaAlumno.getText())){
                JOptionPane.showMessageDialog(this, "Bienvenido a Mundo del Saber");
                this.dispose();
                JFrameMenuPrincipal jfFrameMenuPrincipal = new JFrameMenuPrincipal();
@@ -250,6 +259,7 @@ public class JFrameIniciarAlumno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField txtContraseñaAlumno;
